@@ -1,9 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+// Alpha Codes,// Alpha Codes,// Alpha Codes
 client.on('message', async message => {
     var command = message.content.toLowerCase().split(" ")[0];
-    var prefix = '$';// Alpha Codes
+    var prefix = '!!';// Alpha Codes
     var name = '';// Alpha Codes
     var age = '';// Alpha Codes
     var fromwhere = '';// Alpha Codes
@@ -11,14 +12,11 @@ client.on('message', async message => {
     var filter = m => m.author.id === message.author.id;// Alpha Codes
     var subChannel = message.guild.channels.find(c => c.name === 'support-join');// Alpha Codes
    
-    if(command == prefix + 'تقديم') {// Alpha Codes
+    if(command == prefix + 'join-support') {// Alpha Codes
         if(message.author.bot) return;
         if(message.channel.type === 'dm') return;
  
-        var modRole = message.guild.roles.find(r => r.name === 'TEST');// Alpha Codes
-
-
-
+        var modRole = message.guild.roles.find(r => r.name === '✲ SUPPORT');// Alpha Codes
        
         if(message.guild.member(message.author).roles.has(modRole.id)) return message.channel.send(':x: | معك الرتبة');// Alpha Codes
         if(!subChannel) return message.channel.send(':x: | يجب ان يتوفر روم اسمه `support-join`');// Alpha Codes
