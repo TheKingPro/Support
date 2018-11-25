@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+client.on('ready', () => {
+  console.log(`Welcome Bro ${client.user.tag}!`);
+
 // Alpha Codes,// Alpha Codes,// Alpha Codes
 client.on('message', async message => {
     var command = message.content.toLowerCase().split(" ")[0];
